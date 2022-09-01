@@ -19,6 +19,7 @@ public class AppConfig {
 //	@Bean(name="memberService") // default 설정
 	@Bean // 위의 @Bean 설정과 같다.
 	public MemberService memberService() {
+		System.out.println("call AppConfig.memberService");
 		return new MemberServiceImpl(memberRepository());
 	}
 	
